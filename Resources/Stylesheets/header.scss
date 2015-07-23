@@ -1,0 +1,38 @@
+
+
+
+
+//@media (min-width: 992px) {
+	header {
+		position: absolute;
+		top: 70px;
+		left: 50px;
+		z-index: 2;
+
+		h1 {
+			font-family: $charis;
+			color: #fff;
+			font-size: 32px;
+			letter-spacing: 4px;
+			line-height: 38px;
+		}
+		.border {
+			width: 150px;
+			background: #fff;
+			height: 2px;
+			margin: 20px 0 0 0;
+		}
+		h3 {
+			font-family: $gothic;
+			color: #fff;
+			font-size: 24px;
+			margin: 10px 0 0 0;
+			line-height: 30px;
+		}
+	}
+//}
+
+
+@media (min-width: 1400px) {
+
+}

@@ -1,0 +1,111 @@
+
+.component {
+
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+
+	.component-background {
+		position: absolute;
+		top: 10px;
+		left: 10px;
+		right: 10px;
+		bottom: 10px;
+		z-index: 1;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+
+	}
+
+	&.component-square_sm {}
+	&.component-square_lg {}
+	&.component-fit-window_full {}
+	&.component-fit-window_half {}
+	&.component-hero-unit_sm {}
+	&.component-hero-unit_lg {}
+	&.component-image-panel {}
+	&.component-blank {}
+
+	.content-wrapper {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		z-index: 2;
+		transform: translate(-50%,-50%);
+
+		&.content-half-width { width: 100px; }
+		&.content-half-height { height: 100px; }
+		&.content-70-width { width: 70%; }
+		&.content-simple {
+			text-align: center;
+		}
+
+		h1 {
+			font-family: gothic;
+			margin-bottom: 35px;
+			line-height: 48px;
+		}
+		img.spacer {
+			max-width: 240px;
+			display: block;
+			margin: 0 auto;
+			margin-bottom: 40px;
+			}
+		p.quote {
+			font-family: charis;
+			font-size: 22px;
+			line-height: 35px;
+			letter-spacing: 2px;
+		}
+
+	}
+
+	.white { color: #fff; }
+	.background-white { background: #fff; }
+}
+
+@media (min-width: 992px) {
+	.content-wrapper {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		z-index: 2;
+		transform: translate(-50%,-50%);
+
+		&.content-half-width { width: 200px !important; }
+		&.content-half-height { height: 200px !important; }
+		&.content-70-width { width: 70%; }
+		&.content-simple {
+			text-align: center;
+		}
+
+		h1 {
+			font-family: gothic;
+			margin-bottom: 40px;
+		}
+		img.spacer {
+			max-width: 240px;
+			display: block;
+			margin: 0 auto;
+			margin-bottom: 40px;
+			}
+		p.quote {
+			font-family: charis;
+			font-size: 20px;
+			line-height: 35px;
+			letter-spacing: 2px;
+		}
+
+	}
+
+	.component-background {
+		&.component-background-top20 { top: 20px; }
+		&.component-background-left20 { left: 20px; }
+		&.component-background-right20 { right: 20px; }
+		&.component-background-bottom20 { bottom: 20px; }
+	}
+
+
+}

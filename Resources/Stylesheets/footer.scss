@@ -1,0 +1,66 @@
+footer {
+
+	margin: 40px 0 20px 0;
+
+	.contact-info {
+		margin-top: 80px;
+		text-align: center;
+
+		a.register-btn {
+			font-family: $gothic;
+			font-size: 24px;
+			line-height: 18px;
+			display: inline-block;
+			padding: 18px 18px 10px 18px;
+			background: #000;
+			color: #fff;
+			text-transform: uppercase;
+		}
+
+		.phone-number {
+			font-family: $gothic;
+			margin-top: 20px;
+			text-transform: uppercase;
+			font-size: 50px;
+		}
+
+		.email {
+			font-family: $gothic;
+			margin: 8px 0;
+			text-transform: uppercase;
+			font-size: 18px;
+		}
+	}
+
+	.disclaimer {
+		font-family: charis;
+		font-size: 12px;
+		text-align: center;
+	}
+
+	.social {
+		text-align: center;
+
+		a {
+			color: #000;
+			font-size: 24px;
+			display: inline-block;
+			padding: 5px;
+			margin-left: 20px;
+		}
+	}
+
+	.credits {
+		a {
+			max-width: 140px;
+			float: right;
+			img {
+				max-width: 100%;
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.disclaimer { text-align: left !important; }
+}

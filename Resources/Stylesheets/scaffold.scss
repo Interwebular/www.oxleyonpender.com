@@ -1,0 +1,111 @@
+
+section {
+
+	.large {
+		width: 100%;
+		float: left;
+	}
+
+	.small {
+		width: 100%;
+		float: left;
+	}
+
+	.hero {
+		width: 100%;
+		float: left;
+	}
+
+
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+.fullscreen-image {
+		padding: 10px;
+}
+
+.grid {
+		padding: 5px;
+		div {
+				margin-bottom: 30px;
+		}
+}
+
+.slider {
+
+	button {
+		padding: 20px 0 15px 0;
+		border-radius: 0;
+		background: #f1f1f2;
+		font-family: $gothic;
+		text-transform: uppercase;
+		font-size: 18px;
+		margin-bottom: 20px;
+
+		&:hover {
+			background: #dadadb;
+		}
+
+		&.active {
+			background: #333333;
+			color: #fff;
+		}
+	}
+}
+
+
+.btn.btn-floorplan {
+	 border-radius: 0;
+	 font-family: $gothic;
+	 text-transform: uppercase;
+	 padding: 14px 20px 6px 20px;
+	 font-size: 17px;
+	 margin-bottom: 10px;
+	 background: #fff;
+	 &:hover {
+		 background: #dadadb;
+	 }
+	 &.active {
+		 background: #333333;
+		 color: #fff;
+	 }
+}
+
+@media (min-width: 992px) {
+	section {
+
+		.large {
+			width: 66.66666666%;
+		}
+
+		.small {
+			width: 33.33333333%;
+		}
+	}
+
+	.fullscreen-image {
+			padding: 20px;
+	}
+
+}
+
+.full-content {
+		padding: 80px 0;
+		text-align: center;
+
+		h1 {
+				font-family: $gothic;
+				text-transform: uppercase;
+				margin-bottom: 20px;
+		}
+
+		p {
+				font-size: 1.3em;
+				font-family: $charis;
+				margin-bottom: 20px;
+		}
+}

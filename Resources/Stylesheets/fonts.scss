@@ -1,0 +1,28 @@
+@font-face {
+	font-family: 'charis';
+	src: url('../Fonts/CharisSILR.woff') format('woff'),
+	     url('../Fonts/CharisSILR.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'gothic';
+	src: url('../Fonts/TradeGothicLTStd-Bold.woff') format('woff'),
+	     url('../Fonts/TradeGothicLTStd-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+
+
+$charis: charis;
+$gothic: gothic;
+
+
+a:link,
+a:visited,
+a:active {
+	text-decoration: none;
+}
+
