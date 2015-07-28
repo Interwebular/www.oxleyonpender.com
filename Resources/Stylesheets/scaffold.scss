@@ -55,6 +55,14 @@ section {
 			color: #fff;
 		}
 	}
+
+		img {
+				display: none;
+				margin: 0 auto;
+				&.active {
+						display: block;
+				}
+		}
 }
 
 
@@ -73,6 +81,19 @@ section {
 		 background: #333333;
 		 color: #fff;
 	 }
+}
+
+.plans {
+		img {
+			display: none;
+			margin: 0 auto;
+			&.active { display: block; }
+		}
+}
+
+.dollhouse {
+		display: none;
+		img { margin: 0 auto; }
 }
 
 @media (min-width: 992px) {

@@ -169,4 +169,33 @@
 
 	    });
 
+
+
+			$('.btn-slider').click(function(e){
+					$('.btn-slider').removeClass('active');
+					$(this).addClass('active');
+					var target = $(this).data('slider-image');
+					$('.slider img').removeClass('active');
+					$('.slider-'+target).addClass('active');
+					e.preventDefault();
+			});
+
+			$('.btn-floorplan').click(function(e){
+					$('.btn-floorplan').removeClass('active');
+					$(this).addClass('active');
+					var target = $(this).data('plan');
+					$('.plans img').removeClass('active');
+					$('.'+target).addClass('active');
+
+					if(target === 'townhome-b') {
+							$('.dollhouse').show();
+					}
+					else {
+							$('.dollhouse').hide();
+					}
+
+					e.preventDefault();
+			});
+
+
 })( jQuery );

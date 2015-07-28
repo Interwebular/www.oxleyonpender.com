@@ -14,10 +14,18 @@
 	font-style: normal;
 }
 
+@font-face {
+	font-family: 'gothicCondensed';
+	src: url('../Fonts/TradeGothicLTStd-BdCn20.woff') format('woff'),
+	     url('../Fonts/TradeGothicLTStd-BdCn20.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
 
 
 $charis: charis;
 $gothic: gothic;
+$gothicCondensed: gothicCondensed;
 
 
 a:link,
@@ -25,4 +33,3 @@ a:visited,
 a:active {
 	text-decoration: none;
 }
-
