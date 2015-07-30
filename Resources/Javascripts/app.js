@@ -45,6 +45,30 @@
 		});
 	}
 
+	$.loadImage = function(url) {
+	    var loadImage = function(deferred) {
+		    var image = new Image();
+		    image.onload = loaded;
+		    image.onerror = errored;
+		    image.onabort = errored;
+		    image.src = url;
+		    function loaded() {
+		      unbindEvents();
+		      deferred.resolve(image);
+		    }
+		    function errored() {
+		      unbindEvents();
+		      deferred.reject(image);
+		    }
+		    function unbindEvents() {
+		      image.onload = null;
+		      image.onerror = null;
+		      image.onabort = null;
+		    }
+	    };
+		return $.Deferred(loadImage).promise();
+	};
+
 	function setBackgroundImages() {
 		$('[data-bg]').each(function(){
 			var $this  = $(this),
@@ -53,6 +77,8 @@
 				$pos2  = $this.data('bg-pos-two'),
 				$pos3  = $this.data('bg-pos-three'),
 				$extraClasses;
+
+					$this.prepend('<div class="loader"><i class="fa fa-spinner fa-pulse"></i></div>');
 
 			if( $pos1 === 'top' ) {
 				$extraClasses += ' component-background-top20';
@@ -70,9 +96,17 @@
 				$extraClasses += ' component-background-right20';
 			}
 
-			$this.append('<div class="component-background '+$extraClasses+'" style="background-image: url('+$bg+')"></div>');
+			$.loadImage($bg).done(function(image) {
+					$this.closest('.loader').remove();
+					$this.append('<div class="component-background lazy'+$extraClasses+'" style="background-image: url('+$bg+')"></div>');
+			}).fail(function(image) {
+				$this.closest('.loader').remove();
+				$this.prepend('<div class="loader"><i class="fa fa-chain-broken"></i></div>');
+			});
+			
 		});
 	}
+
 
 	function smoothScrolling() {
 		var $window = $(window);
@@ -196,6 +230,12 @@
 
 					e.preventDefault();
 			});
+
+
+
+
+
+
 
 
 })( jQuery );

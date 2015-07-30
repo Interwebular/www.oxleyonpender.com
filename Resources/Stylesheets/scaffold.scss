@@ -96,6 +96,17 @@ section {
 		img { margin: 0 auto; }
 }
 
+
+.loader {
+	position: absolute;
+	color: #444;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	font-size: 30px;
+
+}
+
 @media (min-width: 992px) {
 	section {
 
