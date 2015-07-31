@@ -84,10 +84,23 @@ section {
 }
 
 .plans {
+		position: relative;
 		img {
 			display: none;
 			margin: 0 auto;
 			&.active { display: block; }
+		}
+		a {
+				display: none;
+				position: absolute;
+				z-index: 1000;
+				right: 35px;
+				bottom: 20px;
+				padding: 12px 20px 8px 20px;
+				border: 1px solid #333;
+				font-family: $gothic;
+		 	 	text-transform: uppercase;
+				color: #333;
 		}
 }
 

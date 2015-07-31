@@ -103,13 +103,13 @@
 				$this.closest('.loader').remove();
 				$this.prepend('<div class="loader"><i class="fa fa-chain-broken"></i></div>');
 			});
-			
+
 		});
 	}
 
 
 	function smoothScrolling() {
-		var $window = $(window);
+	/*	var $window = $(window);
 		var scrollTime = .5;
 		var scrollDistance = 90;
 		$window.on("mousewheel DOMMouseScroll", function(event){
@@ -122,7 +122,7 @@
 				ease: Power1.easeOut,
 				overwrite: 5
 			});
-		});
+		}); */
 	}
 
 
@@ -221,11 +221,20 @@
 					$('.plans img').removeClass('active');
 					$('.'+target).addClass('active');
 
+					if(target === 'townhome-a') {
+							$('.pdf-download').attr('href', './download/the_oxley_floorplans_townhome_a.pdf');
+					}
+
 					if(target === 'townhome-b') {
-							$('.dollhouse').show();
+							$('.pdf-download').attr('href', './download/the_oxley_floorplans_townhome_b.pdf');
+					}
+
+
+					if(target === 'siteplan') {
+							$('.pdf-download').hide();
 					}
 					else {
-							$('.dollhouse').hide();
+							$('.pdf-download').show();
 					}
 
 					e.preventDefault();
