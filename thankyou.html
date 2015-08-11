@@ -6,8 +6,379 @@
     	<meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/bootstrap.css" rel="stylesheet" />
-    	<link href="css/style.css" rel="stylesheet" />
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    	   <style>
+
+         	body {
+         		background:url(img/whitebrick-background.jpg);
+         		background-position: center center;
+         		background-size: contain;
+         		background-attachment: fixed;
+         		background-repeat: repeat;
+         	}
+
+         	@font-face {
+         	    font-family: 'charis';
+         	    src: url('build/Fonts/CharisSILR.ttf') format('truetype');
+         	}
+
+         	@font-face {
+         	    font-family: 'tradegothic18';
+         	    src: url('build/Fonts/TradeGothicLTStd-BdCn20.ttf') format('truetype');
+         	}
+
+         	@font-face {
+         	    font-family: 'tradegothicbold';
+         	    src: url('build/Fonts/TradeGothicLTStd-Bold.ttf') format('truetype');
+         	    font-weight: bold;
+         	}
+
+         	html,
+         	body { height: 100%; }
+
+
+
+
+         	header {
+         		width:100%;
+             	min-height:100%;
+             	position: relative;
+         	}
+
+         		.content {
+         			position: absolute;
+         			left: 50%;
+         			top: 50%;
+         			transform: translate(-50%,-50%);
+         				-moz-transform: translate(-50%,-50%);
+         				-o-transform: translate(-50%,-50%);
+         				-webkit-transform: translate(-50%,-50%);
+         				-ms-transform: translate(-50%,-50%);
+         			max-width: 600px;
+         		}
+         			.content-thankyou {
+         				max-width: 850px;
+         			}
+
+         	.logo {
+         		text-align: center;
+         	}
+
+         	.headline {
+         		text-align: center;
+         		font-family: 'charis', serif;
+         		text-transform: uppercase;
+         	}
+
+         		.headline-thankyou {
+         			font-family: 'tradegothicbold', sans-serif;
+         		}
+
+         	.horizontal-spacer {
+         		width: 100px;
+         		height: 2px;
+         		margin: 40px auto;
+         		background: #000;
+         	}
+
+         	.horizontal-spacer-highlight {
+         		width: 100px;
+         		height: 2px;
+         		margin: 7px auto 0 auto;
+         		background: #000;
+         	}
+
+
+         	.sub-headline {
+         		text-align: center;
+         		font-family: 'tradegothic18', sans-serif;
+         		font-size: 20px;
+         		text-transform: uppercase;
+         	}
+         		.sub-headline a {
+         			color: #000;
+         			text-decoration: none;
+         		}
+
+         		.sub-headline-thankyou {
+         			font-family: 'charis', serif;
+         			text-transform: none;
+         		}
+
+         	.phonenumber {
+         		color: #000 !important;
+         	}
+
+         	.next-arrow {
+         		display: block;
+         		position: fixed;
+         		left: 50%;
+         		bottom: 15px;
+         		transform: translateX(-50%);
+         			-moz-transform: translateX(-50%);
+         			-o-transform: translateX(-50%);
+         			-webkit-transform: translateX(-50%);
+         			-ms-transform: translateX(-50%);
+         		z-index: 10;
+         		transition: margin 0.5s ease-in-out;
+         			-moz-transition: margin 0.5s ease-in-out;
+         			-o-transition: margin 0.5s ease-in-out;
+         			-webkit-transition: margin 0.5s ease-in-out;
+         			-ms-transition: margin 0.5s ease-in-out;
+         		padding: 8px 10px;
+         	}
+         		.hide-arrow {
+         			margin-bottom: -50px;
+         		}
+
+
+         		/* PHONE  */
+         		@media (max-width: 768px) {
+         			.headline {
+         				font-size: 20px;
+         			}
+         			.logo {
+         				margin: 0 0 60px 0;
+         			}
+         			.next-arrow { display: none; }
+         		}
+         		@media (min-width: 768px) {
+         			.headline {
+         				font-size: 20px;
+         			}
+         			.logo {
+         				margin: 0 0 60px 0;
+         			}
+         		}
+
+         		@media (min-width: 992px) {
+         			.headline {
+         				font-size: 26px;
+         			}
+         			.logo {
+         				margin: 0 0 80px 0;
+         			}
+         		}
+         		/*  DESKTOP  */
+         		@media (min-width: 1200px) {
+         			.headline {
+         				font-size: 30px;
+         			}
+         			.logo {
+         				margin: 0 0 100px 0;
+         			}
+         		}
+
+
+
+
+
+         	.highlights {
+         		padding: 150px 0;
+         	}
+         	.highlight {
+         		font-family: 'tradegothicbold', sans-serif;
+         		text-transform: uppercase;
+         		text-align: center;
+         		margin-bottom: 100px;
+         		color: #000;
+
+         	}
+
+         		/* PHONE  */
+         		@media (max-width: 768px) {
+         			.highlight{
+         				font-size: 30px;
+         				line-height: 30px;
+         			}
+         		}
+         		@media (min-width: 768px) {
+         			.highlight{
+         				font-size: 30px;
+         				line-height: 30px;
+         			}
+         		}
+
+         		@media (min-width: 992px) {
+         			.highlight{
+         				font-size: 38px;
+         				line-height: 38px;
+         			}
+         		}
+         		/*  DESKTOP  */
+         		@media (min-width: 1200px) {
+         			.highlight{
+         				font-size: 45px;
+         				line-height: 45px;
+         			}
+         		}
+
+
+         	label {
+         		text-transform: uppercase;
+         		font-family: 'tradegothic18', sans-serif;
+         		font-size: 18px;
+         		margin: 3px;
+         		color: #000;
+         	}
+
+         	input[type=text] {
+         		width: 100%;
+         		font-family: 'tradegothicbold', sans-serif;
+         		font-size: 18px;
+         		outline: 0;
+         		border: none;
+         		background: none;
+         		border-bottom: 1px solid #000;
+         		margin-bottom: 25px;
+         	}
+
+         	input[type=checkbox] {
+
+         	}
+
+         	select {
+         		width: 100%;
+         		font-family: 'tradegothicbold', sans-serif;
+         		font-size: 18px;
+         		outline: 0;
+         		background: none;
+         		border: 1px solid #000;
+         		margin-bottom: 8px;
+         		border-radius: 0;
+         		-webkit-appearance: none;
+           		-webkit-border-radius: 0px;
+           		background: url(../img/arrowdown.gif) no-repeat;
+           		background-position: 98% 50%;
+           		padding: 3px;
+         	}
+
+
+         	.row-dropdowns {
+         		margin: 50px 0;
+         	}
+         /*
+         	.input {
+         		margin-bottom: 100px;
+         	}
+
+         	.input:after {
+         		clear: both;
+         		content: ' ';
+         	} */
+
+         	.form {
+         		margin: 150px 0;
+         	}
+
+         	form {
+         		margin-top: 100px;
+         	}
+
+         .row-checkbox {
+         	margin: 20px 0;
+         }
+
+         .required {
+         	text-transform: uppercase;
+         	font-family: 'tradegothic18', sans-serif;
+         	font-size: 14px;
+         	text-align: right;
+         }
+
+
+         .row-more {
+         	margin: 20px 0;
+         }
+
+         textarea {
+         	display: block;
+         	width: 100%;
+         	height: 110px;
+         	border: 1px solid #000;
+         	margin: 8px 0;
+         }
+
+
+         .row-submit {
+         	margin: 20px 0;
+         	text-align: center;
+         }
+
+         .row-submit button {
+         	background: #000;
+         	display: block;
+         	border: none;
+         	outline: 0;
+         	padding: 20px 40px;
+         	font-family: 'tradegothicbold', sans-serif;
+         	color: #fff;
+         	font-size: 24px;
+         	line-height: 24px;
+         	text-transform: uppercase;
+         }
+
+
+         .submit {
+         	margin: 20px auto 0px;
+         	display: block;
+         	width: 144px;
+         	height: 46px;
+         	text-transform: uppercase;
+         	font-size: 16px;
+         	background: #000;
+         	border-radius: 0px;
+         	border: none;
+         	clear: both;
+         	outline: none;
+         	color: #fff;
+         	font-weight: bold;
+         	padding: 2px 0 0 0;
+         	font-family: 'tradegothicbold', sans-serif;
+         	text-align: center;
+         }
+
+         footer {
+
+         }
+
+         .row-disclaimer {
+         	margin: 80px 0 0 0;
+         	font-family: 'charis', serif;
+         	text-align: center;
+         	color: #000;
+         	font-size: 13px;
+         }
+         .footer-disclaimer {
+         	margin: 40px 20px 0 20px;
+         	font-family: 'charis', serif;
+         	text-align: center;
+         	color: #000;
+         	font-size: 13px;
+         }
+
+         .blvd {
+         	height: 47px;
+         	width: 114px;
+         	margin: 0 auto;
+         	display: block;
+         }
+
+         .input-error {
+         	border-bottom: 1px solid red !important;
+         }
+         .input-error-select {
+         	border: 1px solid red !important;
+         }
+
+         .submit-error {
+         	color: red;
+         	display: none;
+         	font-family: 'tradegothic18', sans-serif;
+         	text-transform: uppercase;
+         }
+
+  </style>
         <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
     </head>
     <body>
@@ -17,7 +388,9 @@
             <div class="content content-thankyou">
 
                 <div class="logo">
-                    <img src="img/oxley-logo-large.png" />
+                    <a href="index.html">
+                    <img src="img/logo.png" style="width: 170px;"/>
+</a>
                 </div>
 
                 <div class="headline headline-thankyou">
@@ -34,9 +407,7 @@
 
 
         <footer>
-            <a href="http://blvdmarketinggroup.com/" class="blvd">
-                <img src="img/blvd-logo-full.png"  />
-            </a>
+
 
             <div class="footer-disclaimer">
                 This is not an offering for sale. Any such offerings may only be made with a Disclosure Statement. E.&.E.0.
