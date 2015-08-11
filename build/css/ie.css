@@ -1,0 +1,10 @@
+footer .contact-info a.register-btn {
+    font-family: gothic;
+    font-size: 24px;
+    line-height: 18px;
+    display: inline-block;
+    padding: 18px 18px 18px 18px !important;
+    background: #000;
+    color: #fff;
+    text-transform: uppercase;
+}
