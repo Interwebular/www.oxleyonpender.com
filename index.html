@@ -200,7 +200,7 @@
 
 </div>
 
-<aside id="soldout">
+<!-- <aside id="soldout">
     <div id="soldout-outer">
         <div id="soldout-panel">
             <div id="soldout-panel-inner">
@@ -213,7 +213,7 @@
             </div>
         </div>
     </div>
-</aside>
+</aside> -->
 <style>
     #soldout {font-family: gothic; position: fixed; top: 0; bottom: 0; left: 0; right: 0; z-index: 10000; background-color: rgba(0,0,0,.75);}
     #soldout-outer {display: table; width: 100%; height: 100%;}
@@ -240,15 +240,15 @@
     <script src="build/js/app.js"></script>
 
     <script>
-    jQuery(document).ready(function($){
-        console.log('ready');
-        $('#soldout-close').on('click', function (e) {
-            e.preventDefault();
-            $('#soldout').animate({opacity:0}, function() {
-                $('#soldout').remove();
-            });
-        });
-    });
+    // jQuery(document).ready(function($){
+
+    //     $('#soldout-close').on('click', function (e) {
+    //         e.preventDefault();
+    //         $('#soldout').animate({opacity:0}, function() {
+    //             $('#soldout').remove();
+    //         });
+    //     });
+    // });
     </script>
     </body>
 </html>
